@@ -1,6 +1,5 @@
-
 public class NumeroConsonantes {
-	private String frase;
+    private String frase;
 
     public NumeroConsonantes(String frase) {
         this.frase = frase;
@@ -8,11 +7,11 @@ public class NumeroConsonantes {
 
     public int contarConsonantes() {
         int contador = 0;
-        String consonantes = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
+        String frasecita = frase.replaceAll(" ", "");
 
-        for (int i = 0; i < frase.length(); i++) {
-            char caracter = frase.charAt(i);
-            if (consonantes.indexOf(caracter) != -1) {
+        for (int i = 0; i < frasecita.length(); i++) {
+            char caracter = Character.toLowerCase(frasecita.charAt(i));
+            if (Character.isLetter(caracter) && !"aeiou".contains(String.valueOf(caracter))) {
                 contador++;
             }
         }

@@ -1,12 +1,13 @@
+public class SinVocales {
+    private String frase;
 
-public class SinVocales{
+    public SinVocales(String frase) {
+        this.frase = frase;
+    }
 
-
-
-public static String obtenerSinVocales(String palabrita){
-	palabrita = palabrita.replaceAll("[AaEeIiOoUu]", "");
-	System.out.println(palabrita);
-	return palabrita;
-}
-
+    public String quitarVocales() {
+        frase = frase.replaceAll("[AaEeIiOoUu]", "");
+        System.out.println(frase);
+        return frase;
+    }
 }

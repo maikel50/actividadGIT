@@ -1,23 +1,20 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Principal {
-static Scanner sc = new Scanner(System.in);
-	public static void main(String[] args) {
-		contarConsonantes();
-		System.out.println("Dime una palabra que le vamos a quitar las vocales jeje");
-		String palabrita = "";
-		palabrita = sc.next();
-		SinVocales.obtenerSinVocales(palabrita);
-		
-	}
+	public static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+    	String palabra;
+        // Ejemplo de uso de las clases
+    	System.out.println("Ponme una palabra contar las consonantes");
+    	palabra = sc.next();
+        NumeroConsonantes contadorConsonantes = new NumeroConsonantes(palabra);
+        int cantidadConsonantes = contadorConsonantes.contarConsonantes();
+        System.out.println("Cantidad de consonantes: " + cantidadConsonantes);
 
-	public static void contarConsonantes() {
-		System.out.println("Escriba la frase");
-		String frase = sc.next() ;
-		NumeroConsonantes consonante = new NumeroConsonantes(frase);
-		int cantidad = consonante.contarConsonantes();
-		System.out.println("La frase tiene " + cantidad + " consonantes");
-	}
-	
-
+        System.out.println("Dime otra palabra para quitar las vocales");
+        palabra = sc.next();
+        SinVocales sinVocales = new SinVocales(palabra);
+        String fraseSinVocales = sinVocales.quitarVocales();
+        System.out.println("Palabra sin vocales: " + fraseSinVocales);
+    }
 }
