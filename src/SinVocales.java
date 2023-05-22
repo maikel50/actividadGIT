@@ -1,10 +1,21 @@
-import java.util.*;
+
 public class SinVocales{
-public static Scanner sc = new Scanner(System.in);
+
+private String palabrita;
+
+
+public String getPalabrita() {
+	return palabrita;
+}
+
+
+public void setPalabrita(String palabrita) {
+	this.palabrita = palabrita;
+}
 
 
 public SinVocales(String palabrita){
-	palabrita = palabrita.replaceAll("[AaEeIiOoUu]", "");
+	this.palabrita = palabrita.replaceAll("[AaEeIiOoUu]", "");
 	System.out.println(palabrita);
 }
 
