@@ -1,10 +1,12 @@
 import java.util.*;
-public class SinVocales {
+public class SinVocales{
 public static Scanner sc = new Scanner(System.in);
-public static void main(String[] args) {
-	System.out.println("Introduce una palabra");
-	String string = sc.next();
-	string = string.replaceAll("[AaEeIiOoUu]", "");
-	System.out.println(string);
+
+
+public static String SinVocales(String palabrita){
+	palabrita = palabrita.replaceAll("[AaEeIiOoUu]", "");
+	System.out.println(palabrita);
+	return palabrita;
 }
+
 }
