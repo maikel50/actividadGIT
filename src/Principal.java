@@ -7,7 +7,7 @@ static Scanner sc = new Scanner(System.in);
 		System.out.println("Dime una palabra que le vamos a quitar las vocales jeje");
 		String palabrita = "";
 		palabrita = sc.next();
-		SinVocales(palabrita);
+		SinVocales.obtenerSinVocales(palabrita);
 		
 	}
 
