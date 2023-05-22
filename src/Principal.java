@@ -19,9 +19,5 @@ static Scanner sc = new Scanner(System.in);
 		System.out.println("La frase tiene " + cantidad + " consonantes");
 	}
 	
-	public static void SinVocales() {
-		System.out.println("Introduce una palabra");
-		String string = sc.next();
-	}
 
 }
